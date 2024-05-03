@@ -1,0 +1,11 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ddsky/spoonacular-api-client"
+        }
+    ],
+    "require": {
+        "ddsky/spoonacular-api-client": "dev-master"
+    }
+}

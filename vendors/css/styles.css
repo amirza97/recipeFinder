@@ -1,0 +1,116 @@
+/* Custom CSS for Recipe Finder */
+body, html {
+    height: 100%; /* Ensure the body and html fill the full height of the viewport */
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* Allows scrolling if the content is taller than the screen */
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Position the pseudo-element to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/app background2.jpg'); /* Correct the path as necessary */
+    background-size: cover; /* Cover the entire size of the element */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the background image */
+    opacity: 0.15; /* Set the opacity to 75% - adjust as necessary */
+    z-index: -1; /* Ensures it's behind all other content */
+}
+
+.container {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.nav-tabs {
+    margin-bottom: 20px;
+}
+
+/* Style for the search input and filter button container */
+.d-flex {
+    gap: 15px; /* Adds space between the search bar and the filter button */
+    margin-top: 15px; /* Adds some space above the container for visual separation */
+}
+
+/* Styles for the filter button for consistency */
+.btn-outline-secondary {
+    white-space: nowrap; /* Ensures the button text does not wrap */
+}
+
+.filter-btn {
+    margin-right: 5px;
+}
+
+.recipe-row:hover {
+    opacity: 0.7;
+}
+
+.custom-rounded {
+    border-top-right-radius: 0.25rem; /* Adjust the radius as needed */
+    border-bottom-right-radius: 0.25rem; /* Adjust the radius as needed */
+}
+
+.card.bg-white {
+    background-color: rgba(255, 255, 255, 1); /* White with opacity for the background */
+    border-radius: 10px; /* Optional: Rounds the corners of the card */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+}
+
+#recipeSubTabs .nav-link {
+    border: 1px solid transparent;
+    background-color: #f8f9fa; /* Light grey background */
+    color: #495057; /* Dark grey text */
+}
+
+#recipeSubTabs .nav-link.active {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text for better contrast */
+}
+
+.clickable-row:hover {
+    background-color: #f8f9fa; /* Light grey, typical for Bootstrap themes */
+    cursor: pointer;
+}
+
+.total-recipes {
+    font-size: 16px;
+    color: #007bff; /* Bootstrap primary color */
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.modal-header, .modal-body, .modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Apply this CSS to ensure full row borders in the table */
+.table {
+    width: 100%; /* Ensures the table stretches to the full width of its container */
+    border-collapse: collapse; /* Collapses borders between table cells */
+}
+
+.table th, .table td {
+    border: 1px solid #dee2e6; /* Apply a subtle border color, typical in Bootstrap tables */
+    padding: 8px; /* Adds padding inside cells for better text alignment */
+    text-align: left; /* Aligns text to the left; adjust as needed */
+}
+
+.table th {
+    background-color: #f8f9fa; /* Light background color for headers; adjust as needed */
+}
+
+#recipeModal .modal-body .table {
+    margin: 0 20px; /* Add horizontal margin */
+}
+
+/* or you can add padding to the modal-body itself if it applies only to the table */
+#recipeModal .modal-body {
+    padding: 0 20px; /* This will add padding around the entire content of the modal-body */
+}
